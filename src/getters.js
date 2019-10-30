@@ -16,6 +16,7 @@ export default function Getters (cosmosRESTURL) {
         if (isTxsPagination) url = url + `&page=${page}&limit=${limit}`
 
         let response = await fetch(url).then(res => res.json())
+        if (!response) throw new Error('got empty response');
 
         // handle txs pagination
         if (isTxsPagination) {
