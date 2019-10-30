@@ -23,9 +23,7 @@
       "license": "Apache-2.0"
     }
   ],
-  { "//": [ 
-    "Modifications copyright (C) 2019 Commonwealth Labs",
-  ]},
+  "//": "Modifications copyright (C) 2019 Commonwealth Labs",
   "devDependencies": {
     "@babel/core": "^7.4.5",
     "@babel/plugin-transform-runtime": "^7.4.4",
