@@ -1,3 +1,5 @@
+// Modifications copyright (C) 2019 Commonwealth Labs
+
 'use strict'
 
 /* eslint-env browser */

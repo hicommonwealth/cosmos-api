@@ -1,3 +1,5 @@
+// Modifications copyright (C) 2019 Commonwealth Labs
+
 import _Getters from './getters'
 import send from './send'
 import simulate from './simulate'

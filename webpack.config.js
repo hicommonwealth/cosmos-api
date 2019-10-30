@@ -1,3 +1,5 @@
+// Modifications copyright (C) 2019 Commonwealth Labs
+
 const config = {
   devtool: "cheap-source-map",
   entry: ['./src/index.js'],
