@@ -163,7 +163,10 @@ export default function Getters (cosmosRESTURL) {
     validator: function (addr) {
       return get(`/staking/validators/${addr}`)
     },
-
+    // Get all delegations to a validator
+    validatorDelegations: function (addr) {
+      return get(`/staking/validators/${addr}/delegations`)
+    },
     // Get the list of the validators in the latest validator set
     validatorSet: () => get(`/validatorsets/latest`),
 
