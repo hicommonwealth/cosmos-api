@@ -44,7 +44,7 @@ export default async function simulate (
   const { gas_estimate: gasEstimate } = await fetch(url, {
     method: `POST`,
     headers: {
-      'Content-Type': 'application/json'
+      'Content-Type': 'text/plain'
     },
     body: JSON.stringify(tx)
   }).then(res => res.json())

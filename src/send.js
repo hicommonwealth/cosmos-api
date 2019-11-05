@@ -12,7 +12,7 @@ export default async function send ({ gas, gasPrices = DEFAULT_GAS_PRICE, memo =
   const res = await fetch(`${cosmosRESTURL}/txs`, {
     method: `POST`,
     headers: {
-      'Content-Type': 'application/json'
+      'Content-Type': 'text/plain'
     },
     body })
     .then(res => res.json())
