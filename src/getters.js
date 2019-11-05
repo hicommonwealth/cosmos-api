@@ -241,6 +241,9 @@ export default function Getters (cosmosRESTURL) {
     block: function (blockHeight) {
       return get(`/blocks/${blockHeight}`)
     },
+    latestBlock: function () {
+      return get(`/blocks/latest`)
+    },
     /* ============ Distribution ============ */
     distributionTxs: async function (address, valAddress) {
       return Promise.all([
