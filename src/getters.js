@@ -12,7 +12,7 @@ export default function Getters (cosmosRESTURL) {
     while (tries) {
       try {
         let url = cosmosRESTURL + path
-        const isTxsPagination = path.startsWith('/txs?')
+        const isTxsPagination = path.includes('/txs')
         if (isTxsPagination) url = url + `&page=${page}&limit=${limit}`
 
         let response = await fetch(url).then(res => res.json())
@@ -105,6 +105,9 @@ export default function Getters (cosmosRESTURL) {
     tx: hash => get(`/txs/${hash}`),
 
     /* ============ STAKE ============ */
+    delegatorTxs: function (address, paginationOptions) {
+      return get(`/staking/delegators/${address}/txs`, paginationOptions)
+    },
     stakingTxs: async function (address, valAddress, paginationOptions) {
       return Promise.all([
         get(
